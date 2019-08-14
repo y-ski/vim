@@ -101,7 +101,10 @@ nnoremap # #zz
 "set clipboard=unnamed
 "set pastetoggle=<F3>
 "" turn off paste mode when leaving insert mode
-"autocmd InsertLeave * set nopaste
+"augroup insertLeave
+"  autocmd!
+"  autocmd InsertLeave * set nopaste
+"augroup END
 
 " split window
 nnoremap ss :<C-u>sp<CR>
@@ -182,8 +185,11 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=7
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=8
+augroup indentGuideColor
+  autocmd!
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=7
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=8
+augroup END
 " markdown
 let g:vim_markdown_folding_disabled = 1
 
