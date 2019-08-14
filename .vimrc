@@ -162,7 +162,10 @@ set showmatch
 let b:match_words = "if:endif,foreach:endforeach,\<begin\>:\<end\>"
 " hilight invisivle character
 set list
-set listchars=tab:»-,extends:»,precedes:«
+" set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set listchars=tab:»-,trail:-,extends:»,precedes:«
+hi NonText    ctermbg=None ctermfg=59 guibg=NONE guifg=None
+hi SpecialKey ctermbg=None ctermfg=59 guibg=NONE guifg=None
 
 " beep off
 set visualbell t_vb=
