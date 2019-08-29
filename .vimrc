@@ -154,7 +154,6 @@ set ruler
 " line number
 set number
 " hilight cursor line
-" set nocursorline
 set nocursorline
 " hilight matched paren
 set showmatch
