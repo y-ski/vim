@@ -100,11 +100,11 @@ nnoremap # #zz
 "" toggle paste mode
 "set clipboard=unnamed
 "set pastetoggle=<F3>
-"" turn off paste mode when leaving insert mode
-"augroup insertLeave
-"  autocmd!
-"  autocmd InsertLeave * set nopaste
-"augroup END
+" turn off paste mode when leaving insert mode
+augroup insertLeave
+  autocmd!
+  autocmd InsertLeave * set nopaste
+augroup END
 
 " split window
 nnoremap ss :<C-u>sp<CR>
