@@ -164,8 +164,8 @@ let b:match_words = "if:endif,foreach:endforeach,\<begin\>:\<end\>"
 set list
 " set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set listchars=tab:»-,trail:-,extends:»,precedes:«
-hi NonText    ctermbg=None ctermfg=59 guibg=NONE guifg=None
-hi SpecialKey ctermbg=None ctermfg=59 guibg=NONE guifg=None
+hi NonText    ctermbg=NONE ctermfg=59 guibg=NONE guifg=NONE
+hi SpecialKey ctermbg=NONE ctermfg=59 guibg=NONE guifg=NONE
 
 " beep off
 set visualbell t_vb=
